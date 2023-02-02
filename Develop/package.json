@@ -10,5 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sofuto22/Professional-ReadMe-Creator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sofuto22/Professional-ReadMe-Creator/issues"
+
+},
+"homepage": "https://github.com/Sofuto22/Professional-ReadMe-Creator"
+
 }

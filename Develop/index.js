@@ -13,7 +13,7 @@ const questions = () => {
             message: "Please enter Username (Required)",
             validate: (githubInput) => {
                 if (githubInput) {
-                    return: true;
+                    return true;
                 } else {
                     console.log("Enter Github Username");
                     return false;
@@ -21,8 +21,20 @@ const questions = () => {
             },
         },
     {
-        
-    }
+        type: "input",
+      name: "title",
+      message: "What is your project title? (Required)",
+      validate: (projectTitle) => {
+        if (projectTitle) {
+          return true;
+        } else {
+          console.log("Please enter your project title!");
+          return false;
+        }
+      },
+
+    },
+
     ])
 };
 

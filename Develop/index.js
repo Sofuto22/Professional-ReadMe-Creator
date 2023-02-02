@@ -5,7 +5,26 @@ const generateMarkdown = require(".utils/generateMarkdown");
 const {loadFromBuffer} = require("bser");
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = () => {
+    return inquirer.createPromptModule([
+        {
+            type: "input",
+            name: "github",
+            message: "Please enter Username (Required)",
+            validate: (githubInput) => {
+                if (githubInput) {
+                    return: true;
+                } else {
+                    console.log("Enter Github Username");
+                    return false;
+                }
+            },
+        },
+    {
+        
+    }
+    ])
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}

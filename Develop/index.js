@@ -35,7 +35,27 @@ const questions = () => {
 
     },
 
-    ])
+    {
+      type: "input",
+      name: "description",
+      message: "Please enter a short description of your project (Required)",
+      validate: (projectDescription) => {
+        if (projectDescription) {
+          return true;
+        } else {
+          console.log("Please enter your project description!");
+          return false;
+        }
+      },
+    },
+    
+  
+  
+  
+  
+  
+  
+  ])
 };
 
 // TODO: Create a function to write README file

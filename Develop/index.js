@@ -48,8 +48,42 @@ const questions = () => {
         }
       },
     },
-    
-  
+    {
+      type:"checkbox",
+      name:"languages",
+      message:"What did you use to build this project?",
+      choices: [
+        "Javascript",
+        "HTML",
+        "CSS",
+        "ES6",
+        "jQuery",
+        "Bootstrap",
+        "Node.js",
+      ],
+    },
+  {
+    type: "list",
+    name:'license',
+    message:"Please select a license",
+    choices: [
+      "MIT",
+      "APACHE(2.0)",
+      "GPL(3.0)",
+      "BSD(3)",
+      "MPL(2.0)",
+      "CDDL(1.0)",
+      "None",
+    ],
+    validate: (projectLicense) => {
+      if (projectLicense){
+        return true;
+        } else {
+          console.log("Please choose a license");
+          return false;
+        }
+    },
+  },
   
   
   

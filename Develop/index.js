@@ -84,7 +84,36 @@ const questions = () => {
         }
     },
   },
-  
+  {
+    type: "input",
+    name: "installation",
+    message: "What command(s) should be run to install dependencies?",
+    default: "npm install",
+  },
+  {
+    type: "input",
+    name: "test",
+    message: "What command(s) should be run to run tests?",
+    default: "npm test",
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "What does the user need to know about using the repo?",
+  },
+  {
+    type: "input",
+    name: "website",
+    message: "Please enter your project website (Required)",
+    validate: (projectWebsite) => {
+      if (projectWebsite) {
+        return true;
+      } else {
+        console.log("Please enter your project website!");
+        return false;
+      }
+    },
+  },
   
   
   

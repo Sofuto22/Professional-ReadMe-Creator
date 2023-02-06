@@ -114,11 +114,35 @@ const questions = () => {
       }
     },
   },
+  {
+    type: "input",
+    name: "email",
+    message: "What's your email address? (Required)",
+    validate: (emailInput) => {
+      if (emailInput) {
+        return true;
+      } else {
+        console.log("Please enter your email!");
+        return false;
+      }
+    },
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "Please enter the contributor name(s) for this project:",
+    validate: (contributorName) => {
+      if (contributorName) {
+        return true;
+      } else {
+        console.log("Please enter contributor(s) name!");
+        return false;
+      }
+    },
+  }, 
   
   
-  
-  
-  ])
+  ]);
 };
 
 // TODO: Create a function to write README file
